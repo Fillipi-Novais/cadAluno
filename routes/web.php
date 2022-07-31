@@ -86,6 +86,4 @@ Route::get('/relatorios', function () {
   return view('/relatorios');
 });
 /* ----------------- CATRACA ---------------------*/
-Route::get('/catraca', function () {
-  return view('/catraca');
-});
+
