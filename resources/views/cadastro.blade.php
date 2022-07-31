@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="jquery.js"></script>
-    <script src="dist/jquery.inputmask.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <title>Colégio Etapa - Cadastro</title>
@@ -19,9 +17,9 @@
         text-align: center;
       }
       .top {      
-      display: flex;
-      align-items:flex-end;
-      margin-top: 1%;            
+        display: flex;
+        align-items:flex-end;
+        margin-top: 1%;            
       }
       .img {
         margin-left: 70%;
@@ -115,6 +113,10 @@
       <hr/>
       <div class="form-row">       
         <div class="form-group col-md-4">
+          <label for="inputEstado">Cep</label> 
+          <input type="text" name="cep" class="form-control" id="inputCep" required>
+        </div>
+        <div class="form-group col-md-4">
           <label for="inputAddress">Rua</label>
           <input type="text" name="rua"class="form-control" id="inputRua" required>
         </div>
@@ -125,10 +127,6 @@
         <div class="form-group col-md-4">
           <label for="inputCity">Complemento</label>
           <input type="text" name="complemento" class="form-control" id="inputComplemento">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputEstado">Cep</label> 
-          <input type="text" name="cep" class="form-control" id="inputCep" required>
         </div>
         <div class="form-group col-md-4">
           <label for="inputCEP">Bairro</label>
@@ -150,9 +148,5 @@
       <button type="submit" class="btn btn-outline-primary">Entrar</button>
     </form>
   </body>
-  <script>
-    $(document).ready(function(){
-      $('#inputTelefone').inputmask('(99) 99999-9999');
-    });
-  </script>  
+  
 </html>

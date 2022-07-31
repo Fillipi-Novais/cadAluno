@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ConsultaController;
 use App\Http\Controllers\MatriculaController;
+use App\Http\Controllers\CadastroController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,13 @@ use App\Http\Controllers\MatriculaController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/* ----------------- Cadastro ------------------*/
+Route::get('/cadastro', function() {
+    return view('cadastro');
+});
+Route::post('/cadastro', [LoginController::class, 'create']);
 
+/* ----------------- Atualização ------------------*/
 Route::get('/', function () {
     return view('welcome');
 });

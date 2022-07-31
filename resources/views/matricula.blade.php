@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -12,90 +12,64 @@
     <link rel="shortcut icon" href="https://www.colegioetapa.com.br/portal/favicon.ico">
 
     <style>       
-      body {
-        background-color: rgb(218, 233, 240);
-        margin-top: 0;
-        text-align: center;
-      }      
-      .img {
-        margin-left: 78%;
-      }
-      hr {
-        margin-top: 0;
-        margin-bottom: 2%; 
-      }
-      .configNav > nav > div{
-        justify-content: center;
-        background-color: rgb(177, 225, 253);
-        border-radius: 50%;
-      }
-      .configGrid {
-        display: grid;
-        grid-template-areas:
-        
-        "sidenav content content"
-        "sidenav content content";        
-      }      
-      .content {
-        grid-area: content;
-      }
-      .sidenav {
-        grid-area: sidenav;
-      }
-      #containerFoto {
-        background-color: rgb(177, 225, 253);
-        width: 250px;
-        height: 300px;
-        margin-left: 15px;       
-      }
-      #configLayout0, #configLayout1, #configLayout2, #configLayout3 {
-        display: flex;
-      }
-      #configLayout0 > div > div > div {
-        border: 5px solid rgb(177, 225, 253);        
-      }
-      #configLayout1 > div > div > div {
-        border: 5px solid rgb(177, 225, 253);        
-      }
-      #configLayout2 > div > div > div {
-        border: 5px solid rgb(177, 225, 253);        
-      }
-      #configLayout3 > div > div > div {
-        border: 5px solid rgb(177, 225, 253);        
-      }
-      #configLayout0 > div > div > div > input {
-        padding: 0;        
-        text-align: center;
-      }
-      #configLayout0 > div > div > div > select {
-        padding: 0;        
-        text-align: center;
-      }
-      #configLayout1 > div > div > div > input {
-        padding: 0;        
-        text-align: center;
-      }
-      #configLayout2 > div > div > div > input {
-        padding: 0;        
-        text-align: center;
-      }
-      #configLayout3 > div > div > div > input {
-        padding: 0;        
-        text-align: center;
-      }
-      #containerForm {
-        padding: 0;        
-        margin-right: 0;
-        max-width: 1000px;
-      }
-      #alinhamentoContainer > div > label{
-        padding-top: 5px; 
-      }
-      
+        body {        
+            margin-top: 0;
+            text-align: center;
+            font-family: Arial;
+            font-size: 16px;
+            background: rgb(174, 212, 255);
+        }
+        form {
+            max-width:100%;
+            margin-left: 200px;
+            margin-top: 10px;
+        }
+       
     </style>
   </head>
 
-  <body>     
+  <body>
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        Link with href
+    </a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    Button with data-bs-target
+    </button>
+      
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+      <!--  
+        <main class="main">
+            <aside class="sidebar">
+              <nav class="nav">
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a href="#">Welcome</a></li>
+                  <li class="nav-item"><a href="#">Who We Are</a></li>
+                  <li class="nav-item"><a href="#">What We Do</a></li>
+                  <li class="nav-item"><a href="#">Get In Touch</a></li>
+                </ul>
+              </nav>
+            </aside>
+        </main>
     <div class="configNav">   
       <nav class="navbar navbar-expand-md navbar-light">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -134,263 +108,214 @@
         </div>
       </nav>
     </div>
-    <div class="configGrid">
-      <div class="sidenav" id="containerFoto">
-        <img src="{{ asset('storage/perfil_3.jpg') }}" width="250" height="300" alt="Perfil Aluno"> 
-      </div>
-      <div class="content">
-        <form method="POST" action="/matricula">
-          @csrf
-          <div id="configLayout0">
-            <div id="containerForm" class="container">
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">
+        -->
+    
+    <form method="POST" action="/matricula">
+        @csrf          
+        <div class="container">
+            <div class="row">
+
                 <div class="col-3">
-                  <label>Filial</label>
+                    <label>Filial</label>
+                    <select name="filial" class="form-control" id="filial"> <!--Falta validação  -->
+                        <option value="">Selecione uma filial</option>
+                        <option value="1">Valinhos</option>
+                        <option value="2">Vila Mariana</option>
+                        <option value="3">Vila Mascote</option>            
+                    </select>
                 </div>
+
                 <div class="col-3">
-                  <label>Curso</label>
+                    <label>Curso</label>
+                    <select name="curso" class="form-control" id="curso"> <!--Falta validação  -->
+                        <option value="">Selecione um curso</option>
+                        <option value="1">Infantil</option>
+                        <option value="2">Fundamental I</option>
+                        <option value="3">Fundamental II</option>
+                        <option value="4">Médio</option>            
+                    </select>
                 </div>
+
                 <div class="col-3">
-                  <label>Habilitação</label>
+                    <label>Habilitação</label>
+                    <select name="habilitacao" class="form-control" id="habilitacao"> <!--Falta validação  -->
+                        <option value="">Selecione uma habilitação</option>
+                        <option value="infantil1">Infantil I</option>
+                        <option value="infantil2">Infantil II</option>
+                        <option value="infantil3">Infantil III</option>
+                        <option value="infantil4">Infantil IV</option>
+                        <option value="fund1_1">Fundamental I - 1º ano</option>
+                        <option value="fund1_2">Fundamental I - 2º ano</option>
+                        <option value="fund1_3">Fundamental I - 3º ano</option>
+                        <option value="fund1_4">Fundamental I - 4º ano</option>
+                        <option value="fund1_5">Fundamental I - 5º ano</option>
+                        <option value="fund2_6">Fundamental II - 6º ano</option>
+                        <option value="fund2_7">Fundamental II - 7º ano</option>
+                        <option value="fund2_8">Fundamental II - 8º ano</option>
+                        <option value="fund2_9">Fundamental II - 9º ano</option>
+                        <option value="medio1">Médio 1º ano</option>
+                        <option value="medio2">Médio 2º ano</option>
+                        <option value="medio3">Médio 3º ano</option>            
+                    </select>
                 </div>
+
                 <div class="col-3">
-                  <label>Período</label>
+                    <label>Período</label>
+                    <select name="periodo" class="form-control" id="periodo" > <!--Falta validação  -->
+                        <option value="">Selecione um período</option>
+                        <!--dados vindos dinamicamente do back -->        
+                    </select>
                 </div>
+
                 <div class="col-3">
-                  <select name="filial" class="form-control" id="filial"> <!--Falta validação  -->
-                    <option value="">Selecione uma filial</option>
-                    <option value="1">Valinhos</option>
-                    <option value="2">Vila Mariana</option>
-                    <option value="3">Vila Mascote</option>            
-                  </select>
+                    <label name="respFinanceiro">Responsável Financeiro</label>
+                    <input type="text" name="respFinanceiro" class="form-control" id="respFinanceiro" >
                 </div>
+
                 <div class="col-3">
-                  <select name="curso" class="form-control" id="curso"> <!--Falta validação  -->
-                    <option value="">Selecione um curso</option>
-                    <option value="1">Infantil</option>
-                    <option value="2">Fundamental I</option>
-                    <option value="3">Fundamental II</option>
-                    <option value="4">Médio</option>            
-                  </select>
+                    <label>RA</label>
+                    <input type="text" name="ra" class="form-control" id="raMatricula" >
                 </div>
+
                 <div class="col-3">
-                  <select name="habilitacao" class="form-control" id="habilitacao"> <!--Falta validação  -->
-                    <option value="">Selecione uma habilitação</option>
-                    <option value="infantil1">Infantil I</option>
-                    <option value="infantil2">Infantil II</option>
-                    <option value="infantil3">Infantil III</option>
-                    <option value="infantil4">Infantil IV</option>
-                    <option value="fund1_1">Fundamental I - 1º ano</option>
-                    <option value="fund1_2">Fundamental I - 2º ano</option>
-                    <option value="fund1_3">Fundamental I - 3º ano</option>
-                    <option value="fund1_4">Fundamental I - 4º ano</option>
-                    <option value="fund1_5">Fundamental I - 5º ano</option>
-                    <option value="fund2_6">Fundamental II - 6º ano</option>
-                    <option value="fund2_7">Fundamental II - 7º ano</option>
-                    <option value="fund2_8">Fundamental II - 8º ano</option>
-                    <option value="fund2_9">Fundamental II - 9º ano</option>
-                    <option value="medio1">Médio 1º ano</option>
-                    <option value="medio2">Médio 2º ano</option>
-                    <option value="medio3">Médio 3º ano</option>            
-                  </select>
+                    <label>Nome</label>
+                    <input type="text" name="nome" class="form-control cpf-mask" id="inputNome" >
                 </div>
+
                 <div class="col-3">
-                  <select name="periodo" class="form-control" id="periodo" > <!--Falta validação  -->
-                    <option value="">Selecione um período</option>
-                    <!--dados vindos dinamicamente do back -->        
-                  </select>
+                    <label>Sexo</label>
+                    <input type="text" name="sexo" class="form-control" id="inputSexo" >
                 </div>
-              </div>  
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">
+
                 <div class="col-3">
-                  <label>Tipo bolsa de estudos</label>
+                    <label>Data de Nascimento</label>
+                    <input type="date" name="dataNascimento"class="form-control" id="inputDataNascimento" >
                 </div>
+
                 <div class="col-3">
-                  <label>Plano de Pgto</label>
+                    <label>E-mail</label>
+                    <input type="email" name="email" class="form-control" id="inputEmail" >
                 </div>
+
                 <div class="col-3">
-                  <label>Status da Matrícula</label>  
+                    <label>Telefone</label>
+                    <input type="text" name="telefone"class="form-control" id="inputTelefone" >
                 </div>
+
                 <div class="col-3">
-                  <label name="respAcademico">Responsável Acadêmico</label>
+                    <label>Nome da Mãe</label>
+                    <input type="text" name="nomeMae"class="form-control" id="nomeMae" >
                 </div>
+
                 <div class="col-3">
-                  <select name="tipoBolsa" class="form-control" id="tipoBolsa"> <!--Falta validação  -->
-                    <option value=""></option>
-                    <option value="nao">Não possui bolsa</option> <!--Validação para amarrar com planoPgto -->
-                    <option value="bolsaIrmao">Bolsa irmão</option>
-                    <option value="bolsaDesafio">Bolsa desafio</option>
-                    <option value="bolsaRetorno">Bolsa retorno</option>
-                    <option value="bolsaTransferencia">Bolsa transferência</option>
-                    <option value="bolsaIndicacao">Bolsa indicação</option>                       
-                  </select>  
+                    <label>Tipo bolsa de estudos</label>
+                    <select name="tipoBolsa" class="form-control" id="tipoBolsa"> <!--Falta validação  -->
+                        <option value=""></option>
+                        <option value="nao">Não possui bolsa</option> <!--Validação para amarrar com planoPgto -->
+                        <option value="bolsaIrmao">Bolsa irmão</option>
+                        <option value="bolsaDesafio">Bolsa desafio</option>
+                        <option value="bolsaRetorno">Bolsa retorno</option>
+                        <option value="bolsaTransferencia">Bolsa transferência</option>
+                        <option value="bolsaIndicacao">Bolsa indicação</option>                       
+                    </select>  
                 </div>
+
                 <div class="col-3">
-                  <select name="planoPgto" class="form-control" id="planoPgto"> <!--Falta validação  -->
-                    <option value=""></option>            
-                    <option value="mensal">Mensal</option> 
-                    <option value="trimestral">Trimestral</option>
-                    <option value="semestral">Semestral</option>
-                    <option value="anual">Anual</option>-->                    
-                  </select>
+                    <label>Plano de Pgto</label>
+                    <select name="planoPgto" class="form-control" id="planoPgto"> <!--Falta validação  -->
+                        <option value=""></option>            
+                        <option value="mensal">Mensal</option> 
+                        <option value="trimestral">Trimestral</option>
+                        <option value="semestral">Semestral</option>
+                        <option value="anual">Anual</option>-->                    
+                    </select>
                 </div>
+
                 <div class="col-3">
-                  <select name="statusMatricula" class="form-control" id="statusMatricula"> <!--Falta validação  -->
-                    <option value=""></option>
-                    <option value="matriculado">Matriculado</option>
-                    <option value="cursando">Cursando</option>                                   
-                  </select> 
+                    <label>Status da Matrícula</label>
+                    <select name="statusMatricula" class="form-control" id="statusMatricula"> <!--Falta validação  -->
+                        <option value=""></option>
+                        <option value="matriculado">Matriculado</option>
+                        <option value="cursando">Cursando</option>                                   
+                    </select>  
                 </div>
+
                 <div class="col-3">
-                  <input type="text" name="respAcademico" class="form-control" id="respAcademico" >
+                    <label name="respAcademico">Responsável Acadêmico</label>
+                    <input type="text" name="respAcademico" class="form-control" id="respAcademico" >
                 </div>
-              </div>                  
-            </div>              
-          </div>          
-          <div id="configLayout1">
-            <div id="containerForm" class="container">
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">
+
                 <div class="col-3">
-                  <label name="respFinanceiro">Responsável Financeiro</label>
+                    <label>Nome da Mãe</label>
+                    <input type="text" name="nomeMae"class="form-control" id="nomeMae" >
                 </div>
+
                 <div class="col-3">
-                  <label>RA</label>
+                    <label>CPF da Mãe</label>
+                    <input type="text" name="cpfMae"class="form-control" id="cpfMae" >
                 </div>
+
                 <div class="col-3">
-                  <label>Nome</label>
+                    <label>Nome do Pai</label>
+                    <input type="text" name="nomePai"class="form-control" id="nomePai" >
                 </div>
+
                 <div class="col-3">
-                  <label>Sexo</label>
+                    <label>CPF do Pai</label>
+                    <input type="text" name="cpfPai"class="form-control" id="cpfPai" >
                 </div>
+
                 <div class="col-3">
-                  <input type="text" name="respFinanceiro" class="form-control" id="respFinanceiro" >
+                    <label>Rua</label>
+                    <input type="text" name="rua"class="form-control" id="inputRua" >
                 </div>
+
                 <div class="col-3">
-                  <input type="text" name="ra" class="form-control" id="raMatricula" >
+                    <label for="inputAddress2">Número</label>
+                    <input type="text" name="numero" class="form-control" id="inputNumero" >
                 </div>
+
                 <div class="col-3">
-                  <input type="text" name="nome" class="form-control cpf-mask" id="inputNome" >
+                    <label for="inputCity">Complemento</label>
+                    <input type="text" name="complemento" class="form-control" id="inputComplemento">
                 </div>
+
                 <div class="col-3">
-                  <input type="text" name="sexo" class="form-control" id="inputSexo" >
+                    <label for="inputEstado">Cep</label>
+                    <input type="text" name="cep" class="form-control" id="inputCep" >
                 </div>
-              </div>
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">
+
                 <div class="col-3">
-                  <label>Data de Nascimento</label>
+                    <label for="inputCEP">Bairro</label>
+                    <input type="text" name="bairro" class="form-control" id="inputBairro" >
                 </div>
+
                 <div class="col-3">
-                  <label>E-mail</label>
+                    <label for="inputCEP">Cidade</label>
+                    <input type="text" name="cidade" class="form-control" id="inputCidade" >
                 </div>
+
                 <div class="col-3">
-                  <label>Telefone</label>
+                    <label for="inputCEP">Estado</label>
+                    <input type="text" name="estado" class="form-control" id="inputEstado" >
                 </div>
+
                 <div class="col-3">
-                  <label>Nome da Mãe</label>
+                    <label for="inputCEP">País</label>
+                    <input type="text" name="pais" class="form-control" id="inputPais" >
                 </div>
-                <div class="col-3">
-                  <input type="date" name="dataNascimento"class="form-control" id="inputDataNascimento" >
-                </div>
-                <div class="col-3">
-                  <input type="email" name="email" class="form-control" id="inputEmail" >
-                </div>
-                <div class="col-3">
-                  <input type="text" name="telefone"class="form-control" id="inputTelefone" >
-                </div>
-                <div class="col-3">
-                  <input type="text" name="nomeMae"class="form-control" id="nomeMae" >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="configLayout2">   
-            <div id="containerForm" class="container">
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">
-                <div class="col-3">
-                  <label>CPF da Mãe</label>
-                </div>
-                <div class="col-3">
-                  <label>Nome do Pai</label>
-                </div>
-                <div class="col-3">
-                  <label>CPF do Pai</label>
-                </div>
-                <div class="col-3">
-                  <label>Rua</label>
-                </div>
-                <div class="col-3">
-                  <input type="text" name="cpfMae"class="form-control" id="cpfMae" >
-                </div>
-                <div class="col-3">
-                  <input type="text" name="nomePai"class="form-control" id="nomePai" >
-                </div>
-                <div class="col-3">
-                  <input type="text" name="cpfPai"class="form-control" id="cpfPai" >
-                </div>
-                <div class="col-3">
-                  <input type="text" name="rua"class="form-control" id="inputRua" >
-                </div>
-              </div>
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">
-                <div class="col-3">
-                  <label for="inputAddress2">Número</label>
-                </div>
-                <div class="col-3">
-                  <label for="inputCity">Complemento</label>
-                </div>
-                <div class="col-3">
-                  <label for="inputEstado">Cep</label>
-                </div>
-                <div class="col-3">
-                  <label for="inputCEP">Bairro</label>
-                </div>
-                <div class="col-3">
-                  <input type="text" name="numero" class="form-control" id="inputNumero" >
-                </div>
-                <div class="col-3">
-                  <input type="text" name="complemento" class="form-control" id="inputComplemento">
-                </div>
-                <div class="col-3">
-                  <input type="text" name="cep" class="form-control" id="inputCep" >
-                </div>
-                <div class="col-3">
-                  <input type="text" name="bairro" class="form-control" id="inputBairro" >
-                </div>
-              </div>
-            </div>                        
-          </div>
-          <div id="configLayout3">   
-            <div id="containerForm" class="container">
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">           
-                <div class="col-4">
-                  <label for="inputCEP">Cidade</label>
-                </div>
-                <div class="col-4">
-                  <label for="inputCEP">Estado</label>
-                </div>
-                <div class="col-4">
-                  <label for="inputCEP">País</label>
-                </div>
-              </div>  
-              <div class="row no-gutters justify-content-around" id="alinhamentoContainer">   
-                <div class="col-4">
-                  <input type="text" name="cidade" class="form-control" id="inputCidade" >
-                </div>
-                <div class="col-4">
-                  <input type="text" name="estado" class="form-control" id="inputEstado" >
-                </div>
-                <div class="col-4">
-                  <input type="text" name="pais" class="form-control" id="inputPais" >
-                </div>
-              </div>              
-            </div>
-          </div>
-          <button type="submit" class="btn btn-outline-primary">Finalizar</button>            
-        </form>
-      </div>  
-    </div>
+
+            </div>            
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">Finalizar</button>
+
+    </form>
   </body>
   <script>
+
+    
+
     function periodoMatricula(filial, curso) {
       $('#periodo').empty()
       $.ajax({  
@@ -441,12 +366,12 @@
     }
 
     $(document).ready(() => {
-      $('#filial').on('change', () => {
+      /*$('#filial').on('change', () => {
         var filial = $('#filial').val()
         var curso = $('#curso').val()
 
         periodoMatricula(filial,curso);
-      })
+      })*/
       $('#curso').on('change', () => {
         var filial = $('#filial').val()
         var curso = $('#curso').val()
@@ -455,6 +380,7 @@
       })
     })
 
+    /*
     $(document).ready(() => {
       $('#autoPreenchimento').on('click', () => {
         var consultaCadastro = $('#inputCpfMatricula').val()
@@ -464,7 +390,7 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           },
           type: 'get',                             
-          url: `http://localhost:8000/consultaCad?consultaCad=${consultaCadastro}`,ms.               
+          url: `http://localhost:8000/consultaCad?consultaCad=${consultaCadastro}`,              
           success: result => {
             console.log(result)
           },
@@ -473,6 +399,6 @@
           }
         })
       })
-    })
+    }) */
   </script>
 </html>
