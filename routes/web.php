@@ -78,9 +78,7 @@ Route::get('/fiscal', function () {
   return view('/fiscal');
 });
 /* ----------------- FINANCEIRO ---------------------*/
-Route::get('/financeiro', function () {
-  return view('/financeiro');
-});
+
 /* ----------------- RELATORIOS ---------------------*/
 Route::get('/relatorios', function () {
   return view('/relatorios');
